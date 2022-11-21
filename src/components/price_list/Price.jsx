@@ -22,7 +22,7 @@ const Price = () => {
     
   return (
     <div>
-        <p className='testimonial-p' style={{color: 'black'}}>Harga Pengiriman Paket</p>
+        <p className='testimonial-p' style={{color: 'black'}}>Harga Pengiriman</p>
         {
             priceLists.length && (
                 <>

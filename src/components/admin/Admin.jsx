@@ -16,7 +16,8 @@ const Admin = () => {
   const [products, setProducts] = useState(null)
   const [error, setError] = useState(null)
 //   const nomor = '6285155100324'
-  const Bearer = 'EAAGq9oJUVs4BANAozacf8otuFfGCwjjpRvRYxUYnebVS7WXmIGgdcAeZBEC3kVVQowTWftsi42Dm2jBib3dbSMT5xlmWD548YmdUKj7ixV1UTnLmJx7KGkD09ywHvYhcVDqZBOzDQOu4ZBIfoSTCVhlFBZAtssFBZBM5bzgW5oZCv0ucdZARZBS9dsFM9uLNm3C3HsF93gkgcr2GsJdl9ZC1V'
+
+  const Bearer = 'EAAGq9oJUVs4BAAu3TSk1tkptaNJxqMOnxDMPB5cdsdETk6tWcPgOpZAnjQWX44jgBoaywBKimyzZCrgIZAlvBgn4lB77GVvbGylQD4Rm7q1FuMfZAyzTuIDvONmPohkdlxtAIzYZC59Pibe6pT3KXCFGxqIbtiBgsqoEpZCDWWz3trC3coppbfSR5qT19J4noB6ZAk7mjAr1YeA5o5oRxWC'
 
   const handleClick = async (id) => {
         const response = await fetch('https://tbndeliverybackend-production.up.railway.app/api/products/' + id, {
@@ -65,7 +66,7 @@ const Admin = () => {
                     "parameters": [
                         {
                             "type": "text",
-                            "text": `${name}, Paket Anda dengan nomor Resi ${noResi}`
+                            "text": `${name}, Paket Anda dengan nomor Resi ${noResi} akan ${alamatBarang}`
                         }
                     ]
                 }] 
@@ -142,6 +143,18 @@ const Admin = () => {
                     >
                         <option value="#">Pilih Nama dan Nomor</option>
                         {nomorWas && nomorWas.map(wa => <option value={`${wa.name},${wa.nomor}`}><span>{wa.name}</span> | <span>{wa.nomor}</span></option> )}                       
+                    </select>
+                    <label>Jadwal Pengiriman:</label>
+                    <select
+                        onChange={(e) => setAlamatBarang(e.target.value)}
+                    >
+                        <option value="#">Pilih Jadwal Pengiriman</option>
+                        <option value="Dikirim Pada Jam 12 Siang">Jam 12 Siang</option>
+                        <option value="Dikirim Pada Jam 1 Siang">Jam 1 Siang</option>
+                        <option value="Dikirim Pada Jam 2 Siang">Jam 2 Siang</option>
+                        <option value="Dikirim Pada Jam 3 Siang">Jam 3 Siang</option>
+                        <option value="Dikirim Pada Jam 4 Sore">Jam 4 Sore</option>
+                        <option value="Dikirim Pada Jam 5 Sore">Jam 5 Sore</option>
                     </select>
                     <button>Tambahkan</button>
                     {error && <div>{error}</div>}
