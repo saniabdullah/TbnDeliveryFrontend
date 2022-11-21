@@ -1,0 +1,12 @@
+.create {
+    min-height: 80vh;
+    margin: auto;
+    padding-top: 150px;
+
+    @media screen and (max-width: 600px) {
+        form {
+            width: 250px;
+            margin: auto;
+        }
+    }
+}
