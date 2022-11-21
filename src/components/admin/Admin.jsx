@@ -16,7 +16,7 @@ const Admin = () => {
   const [products, setProducts] = useState(null)
   const [error, setError] = useState(null)
 //   const nomor = '6285155100324'
-  const Bearer = 'EAAGq9oJUVs4BAETIrzKDOCduGRQ021FZAOmEFzwrgevOnADKOdxtuoQttVh3OXgur2Qd7FOapV0hjAl7koyGmYxZAKDOWPJ1uXDAJxrFXjHCn6Rc6QZBrmUbhxG5j65wBZBfhJIjnxrAQsgHw6TLfHYZBWp18APH6F6zOhxw6v23yppbf5H3QXSwlZAzfrWpK3ZB051pkBDjhtUvZC72D1xv'
+  const Bearer = 'EAAGq9oJUVs4BANAozacf8otuFfGCwjjpRvRYxUYnebVS7WXmIGgdcAeZBEC3kVVQowTWftsi42Dm2jBib3dbSMT5xlmWD548YmdUKj7ixV1UTnLmJx7KGkD09ywHvYhcVDqZBOzDQOu4ZBIfoSTCVhlFBZAtssFBZBM5bzgW5oZCv0ucdZARZBS9dsFM9uLNm3C3HsF93gkgcr2GsJdl9ZC1V'
 
   const handleClick = async (id) => {
         const response = await fetch('https://tbndeliverybackend-production.up.railway.app/api/products/' + id, {
