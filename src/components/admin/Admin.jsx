@@ -17,7 +17,7 @@ const Admin = () => {
   const [error, setError] = useState(null)
 //   const nomor = '6285155100324'
 
-  const Bearer = 'EAAGq9oJUVs4BAAu3TSk1tkptaNJxqMOnxDMPB5cdsdETk6tWcPgOpZAnjQWX44jgBoaywBKimyzZCrgIZAlvBgn4lB77GVvbGylQD4Rm7q1FuMfZAyzTuIDvONmPohkdlxtAIzYZC59Pibe6pT3KXCFGxqIbtiBgsqoEpZCDWWz3trC3coppbfSR5qT19J4noB6ZAk7mjAr1YeA5o5oRxWC'
+//   const Bearer = 'EAAGq9oJUVs4BAAu3TSk1tkptaNJxqMOnxDMPB5cdsdETk6tWcPgOpZAnjQWX44jgBoaywBKimyzZCrgIZAlvBgn4lB77GVvbGylQD4Rm7q1FuMfZAyzTuIDvONmPohkdlxtAIzYZC59Pibe6pT3KXCFGxqIbtiBgsqoEpZCDWWz3trC3coppbfSR5qT19J4noB6ZAk7mjAr1YeA5o5oRxWC'
 
   const handleClick = async (id) => {
         const response = await fetch('https://tbndeliverybackend-production.up.railway.app/api/products/' + id, {
@@ -52,6 +52,31 @@ const Admin = () => {
     })
 
 
+    // const responseTBN = await fetch('https://graph.facebook.com/v15.0/101357146137355/messages', {
+    //     method: 'POST',
+    //     body: JSON.stringify({ "messaging_product": "whatsapp", 
+    //         "to": `${nomor}`, 
+    //         "type": "template", 
+    //         "template": 
+    //         { 
+    //             "name": "delivery_tbn", 
+    //             "language": { "code": "id" }, 
+    //             "components": [{
+    //                 "type": "body",
+    //                 "parameters": [
+    //                     {
+    //                         "type": "text",
+    //                         "text": `${name}, Paket Anda dengan nomor Resi ${noResi} akan ${alamatBarang}`
+    //                     }
+    //                 ]
+    //             }] 
+    //         } 
+    //     }),
+    //     headers: {
+    //         'Authorization': `Bearer ${process.env.REACT_APP_BEARER}`,
+    //         'Content-Type': 'application/json'
+    //     }
+    // })
     const responseTBN = await fetch('https://graph.facebook.com/v15.0/101357146137355/messages', {
         method: 'POST',
         body: JSON.stringify({ "messaging_product": "whatsapp", 
@@ -59,21 +84,12 @@ const Admin = () => {
             "type": "template", 
             "template": 
             { 
-                "name": "delivery_tbn", 
-                "language": { "code": "id" }, 
-                "components": [{
-                    "type": "body",
-                    "parameters": [
-                        {
-                            "type": "text",
-                            "text": `${name}, Paket Anda dengan nomor Resi ${noResi} akan ${alamatBarang}`
-                        }
-                    ]
-                }] 
+                "name": "tbn_delivery", 
+                "language": { "code": "id" }
             } 
         }),
         headers: {
-            'Authorization': `Bearer ${Bearer}`,
+            'Authorization': `Bearer ${process.env.REACT_APP_BEARER}`,
             'Content-Type': 'application/json'
         }
     })

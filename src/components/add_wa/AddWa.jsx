@@ -8,6 +8,8 @@ const AddWa = () => {
   const [isDelete, setIsDelete] = useState(false)
   const [nomor, setNomor] = useState('')
 
+  console.log(process.env)
+
   const { admin } = useAuthContext();
   const [nomorWas, setNomorWas] = useState('')
   const [error, setError] = useState(null)
