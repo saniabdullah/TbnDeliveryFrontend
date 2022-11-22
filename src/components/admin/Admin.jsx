@@ -77,15 +77,15 @@ const Admin = () => {
     //         'Content-Type': 'application/json'
     //     }
     // })
-    const responseTBN = await fetch('https://graph.facebook.com/v15.0/101357146137355/messages', {
+    const responseTBN = await fetch('https://graph.facebook.com/v15.0/103407349273714/messages', {
         method: 'POST',
         body: JSON.stringify({ "messaging_product": "whatsapp", 
             "to": `${nomor}`, 
             "type": "template", 
             "template": 
             { 
-                "name": "tbn_delivery", 
-                "language": { "code": "id" }
+                "name": "hello_world", 
+                "language": { "code": "en_US" }
             } 
         }),
         headers: {
