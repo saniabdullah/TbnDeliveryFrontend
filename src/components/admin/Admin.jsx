@@ -155,6 +155,7 @@ const Admin = () => {
                     />
                     <label>Nama:</label>
                     <select
+                        value={name}
                         onChange={(e) => {setName(e.target.value.split(",").slice(0, 1).toString()); setNomor(e.target.value.split(",").slice(1).toString());}}
                     >
                         <option value="#">Pilih Nama dan Nomor</option>
