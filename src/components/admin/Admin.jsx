@@ -151,7 +151,7 @@ const Admin = () => {
                         type="text" 
                         required
                         value={noResi}
-                        onChange={(e) => setNoResi(e.target.value)}
+                        onChange={(e) => setNoResi(e.target.value.toLowerCase())}
                     />
                     <label>Nama:</label>
                     <select

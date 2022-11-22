@@ -43,7 +43,7 @@ const Tracking = () => {
 
     const [noTracking, setNoTracking] = useState('')
     const handleChangeInput = (e) => {
-        const nomor = e.target.value;
+        const nomor = e.target.value.toLowerCase();
         setNoTracking(nomor);
     };
     return (
@@ -57,7 +57,7 @@ const Tracking = () => {
                     <button type="button" className="p-text" onClick={() => handleClick(noTracking)}>Cari</button>
                     {product && product.map((p) => (
                         <>
-                            <h3 style={{paddingTop: '20px'}}>Nama: <span style={{color: 'green'}}>{(p.name).toUpperCase()}</span></h3>
+                            <h3 style={{paddingTop: '20px', color: 'black'}}>Nama: <span style={{color: 'green'}}>{(p.name).toUpperCase()}</span></h3>
                             <h1 style={{paddingTop: '10px', color: 'black', textAlign: 'center'}}>Barang anda saat ini : <span style={{color: 'green'}}>{(p.alamatBarang).toUpperCase()}</span></h1>
                         </>
                         ))
