@@ -52,31 +52,6 @@ const Admin = () => {
     })
 
 
-    // const responseTBN = await fetch('https://graph.facebook.com/v15.0/103407349273714/messages', {
-    //     method: 'POST',
-    //     body: JSON.stringify({ "messaging_product": "whatsapp", 
-    //         "to": `${nomor}`, 
-    //         "type": "template", 
-    //         "template": 
-    //         { 
-    //             "name": "delivery_tbn", 
-    //             "language": { "code": "id" }, 
-    //             "components": [{
-    //                 "type": "body",
-    //                 "parameters": [
-    //                     {
-    //                         "type": "text",
-    //                         "text": `${name}, Paket Anda dengan nomor Resi ${noResi} akan ${alamatBarang}`
-    //                     }
-    //                 ]
-    //             }] 
-    //         } 
-    //     }),
-    //     headers: {
-    //         'Authorization': `Bearer ${process.env.REACT_APP_BEARER}`,
-    //         'Content-Type': 'application/json'
-    //     }
-    // })
     const responseTBN = await fetch('https://graph.facebook.com/v15.0/103407349273714/messages', {
         method: 'POST',
         body: JSON.stringify({ "messaging_product": "whatsapp", 
@@ -84,8 +59,17 @@ const Admin = () => {
             "type": "template", 
             "template": 
             { 
-                "name": "hello_world", 
-                "language": { "code": "en_US" }
+                "name": "delivery_tbn", 
+                "language": { "code": "id" }, 
+                "components": [{
+                    "type": "body",
+                    "parameters": [
+                        {
+                            "type": "text",
+                            "text": `${name}, Paket Anda dengan nomor Resi ${noResi} akan ${alamatBarang}`
+                        }
+                    ]
+                }] 
             } 
         }),
         headers: {
@@ -93,6 +77,22 @@ const Admin = () => {
             'Content-Type': 'application/json'
         }
     })
+    // const responseTBN = await fetch('https://graph.facebook.com/v15.0/103407349273714/messages', {
+    //     method: 'POST',
+    //     body: JSON.stringify({ "messaging_product": "whatsapp", 
+    //         "to": `${nomor}`, 
+    //         "type": "template", 
+    //         "template": 
+    //         { 
+    //             "name": "hello_world", 
+    //             "language": { "code": "en_US" }
+    //         } 
+    //     }),
+    //     headers: {
+    //         'Authorization': `Bearer ${process.env.REACT_APP_BEARER}`,
+    //         'Content-Type': 'application/json'
+    //     }
+    // })
 
     const json = await response.json()
     await responseTBN.json();
