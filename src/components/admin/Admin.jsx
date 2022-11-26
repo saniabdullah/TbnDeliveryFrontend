@@ -109,6 +109,7 @@ const Admin = () => {
         setName('')
         setAlamatBarang('')
         // console.log('new product added', json)
+        
     }
 
   }
