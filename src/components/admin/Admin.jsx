@@ -171,7 +171,7 @@ const Admin = () => {
                         <option value="Dikirim Pada Jam 7 Pagi">Jam 7 Pagi</option>
                         <option value="Dikirim Pada Jam 8 Pagi">Jam 8 Pagi</option>
                         <option value="Dikirim Pada Jam 9 Pagi">Jam 9 Pagi</option>
-                        <option value="Dikirim Pada Jam 10 Siang">Jam 10 Siang</option>
+                        <option value="Dikirim Pada Jam 10 Pagi">Jam 10 Pagi</option>
                         <option value="Dikirim Pada Jam 11 Siang">Jam 11 Siang</option>
                         <option value="Dikirim Pada Jam 12 Siang">Jam 12 Siang</option>
                         <option value="Dikirim Pada Jam 1 Siang">Jam 1 Siang</option>
