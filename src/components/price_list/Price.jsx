@@ -26,26 +26,26 @@ const Price = () => {
         {
             priceLists.length && (
                 <>
-                <div class="slide-container">
-                    <div class="wrapper">
-                        <div class="clash-card barbarian">
-                            <div class="clash-card__image clash-card__image--barbarian">
+                <div className="slide-container">
+                    <div className="wrapper">
+                        <div className="clash-card barbarian">
+                            <div className="clash-card__image clash-card__image--barbarian">
                                 <img src={priceLists[currentIndex].imgurl} alt="barbarian" />
                             </div>
-                        <div class="clash-card__level clash-card__level--barbarian">{priceLists[currentIndex].level}</div>
-                        <div class="clash-card__unit-description" style={{color: "black", fontSize: '20px'}}>
+                        <div className="clash-card__level clash-card__level--barbarian">{priceLists[currentIndex].level}</div>
+                        <div className="clash-card__unit-description" style={{color: "black", fontSize: '20px'}}>
                             {priceLists[currentIndex].harga}
                         </div>
-                        <div class="clash-card__unit-name" style={{color: "red"}}>{priceLists[currentIndex].hargaDetail}</div>
+                        <div className="clash-card__unit-name" style={{color: "red"}}>{priceLists[currentIndex].hargaDetail}</div>
                         {
-                            priceLists[currentIndex].desc != null ? <div class="" style={{color: "black"}}>
+                            priceLists[currentIndex].desc != null ? <div className="" style={{color: "black"}}>
                                 <hr/>
                                 <small>{priceLists[currentIndex].desc}</small>
                             </div> : <div></div>
                         }
                         <hr  style={{border: '3px'}}/>
                         <h3 style={{color: "black"}}>Gunakan Alamat:</h3>
-                        <div class="clash-card__unit-description" style={{color: "black"}}>
+                        <div className="clash-card__unit-description" style={{color: "black"}}>
                             Jl. Pramuka Komplek Satelit Permai Blok A No. 3 (Kopi Nalar)
                             Kecamatan Banjarmasin Timur Kota Banjarmasin, Kalimantan Selatan.
                             Kode Pos 70238
