@@ -48,7 +48,7 @@ const Tracking = () => {
     };
     return (
         <>
-        <p className='testimonial-p' style={{color: 'black'}}>Tracking Paket</p>
+        <p className='testimonial-p' style={{color: 'black'}}>Cek Resi</p>
             <div className='app__testimonial-item'>
                 <div className="app__footer-form app__flex">
                     <div className="app__flex">
