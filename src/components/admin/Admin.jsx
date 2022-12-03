@@ -67,7 +67,7 @@ const Admin = () => {
                     "parameters": [
                         {
                             "type": "text",
-                            "text": `${name}, Paket Anda dengan nomor Resi ${noResi} ${alamatBarang}`
+                            "text": `${name}, Paket Anda dengan nomor Resi ${noResi} ${alamatBarang}, ${cod}`
                         }
                     ]
                 }] 
@@ -182,6 +182,15 @@ const Admin = () => {
                         <option value="Dikirim Pada Jam 3 Siang">Jam 3 Siang</option>
                         <option value="Dikirim Pada Jam 4 Sore">Jam 4 Sore</option>
                         <option value="Dikirim Pada Jam 5 Sore">Jam 5 Sore</option>
+                    </select>
+                    <label>Tipe Pengiriman:</label>
+                    <select
+                        value={cod}
+                        onChange={(e) => setCod(e.target.value)}
+                    >
+                        <option value="#">Pilih Tipe Pengiriman</option>
+                        <option value="Non-COD">Non-COD</option>
+                        <option value="COD">COD</option>
                     </select>
                     <button>Tambahkan</button>
                     {error && <div>{error}</div>}
