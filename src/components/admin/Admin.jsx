@@ -10,6 +10,7 @@ const Admin = () => {
   const [isDelete, setIsDelete] = useState(false)
   const [nomorWas, setNomorWas] = useState('')
   const [nomor, setNomor] = useState('')
+  const [cod, setCod] = useState('')
 
   const { admin } = useAuthContext();
   
@@ -66,7 +67,7 @@ const Admin = () => {
                     "parameters": [
                         {
                             "type": "text",
-                            "text": `${name}, Paket Anda dengan nomor Resi ${noResi} akan ${alamatBarang}`
+                            "text": `${name}, Paket Anda dengan nomor Resi ${noResi} ${alamatBarang}`
                         }
                     ]
                 }] 
@@ -77,7 +78,7 @@ const Admin = () => {
             'Content-Type': 'application/json'
         }
     })
-    
+
     // const responseTBN = await fetch('https://graph.facebook.com/v15.0/103407349273714/messages', {
     //     method: 'POST',
     //     body: JSON.stringify({ "messaging_product": "whatsapp", 
@@ -169,6 +170,7 @@ const Admin = () => {
                         onChange={(e) => setAlamatBarang(e.target.value)}
                     >
                         <option value="#">Pilih Jadwal Pengiriman</option>
+                        <option value="Sudah Sampai di tamban">Sudah Sampai di tamban</option>
                         <option value="Dikirim Pada Jam 7 Pagi">Jam 7 Pagi</option>
                         <option value="Dikirim Pada Jam 8 Pagi">Jam 8 Pagi</option>
                         <option value="Dikirim Pada Jam 9 Pagi">Jam 9 Pagi</option>
