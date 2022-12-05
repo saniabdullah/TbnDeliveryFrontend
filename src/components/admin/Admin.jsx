@@ -77,7 +77,6 @@ const Admin = () => {
             'Authorization': `Bearer ${process.env.REACT_APP_BEARER}`,
             'Content-Type': 'application/json'
         }
-        
     })
 
     // const responseTBN = await fetch('https://graph.facebook.com/v15.0/103407349273714/messages', {
