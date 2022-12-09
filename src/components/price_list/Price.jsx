@@ -17,7 +17,6 @@ const Price = () => {
     ];
 
     
-    
     const handleClick = (index) => {
         setCurrentIndex(index);
     };
