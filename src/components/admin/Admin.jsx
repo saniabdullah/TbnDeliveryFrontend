@@ -60,7 +60,7 @@ const Admin = () => {
             "type": "template", 
             "template": 
             { 
-                "name": "delivery_tbn", 
+                "name": "tracking_tbn", 
                 "language": { "code": "id" }, 
                 "components": [{
                     "type": "body",
@@ -172,7 +172,7 @@ const Admin = () => {
                     >
                         <option value="#">Pilih Jadwal Pengiriman</option>
                         <option value="Sudah Sampai di tamban">Sudah Sampai di tamban</option>
-                        <option value="Dikirim Pada Jam 7 Pagi">Jam 7 Pagi</option>
+                        {/* <option value="Dikirim Pada Jam 7 Pagi">Jam 7 Pagi</option>
                         <option value="Dikirim Pada Jam 8 Pagi">Jam 8 Pagi</option>
                         <option value="Dikirim Pada Jam 9 Pagi">Jam 9 Pagi</option>
                         <option value="Dikirim Pada Jam 10 Pagi">Jam 10 Pagi</option>
@@ -182,7 +182,7 @@ const Admin = () => {
                         <option value="Dikirim Pada Jam 2 Siang">Jam 2 Siang</option>
                         <option value="Dikirim Pada Jam 3 Siang">Jam 3 Siang</option>
                         <option value="Dikirim Pada Jam 4 Sore">Jam 4 Sore</option>
-                        <option value="Dikirim Pada Jam 5 Sore">Jam 5 Sore</option>
+                        <option value="Dikirim Pada Jam 5 Sore">Jam 5 Sore</option> */}
                     </select>
                     <label>Tipe Pengiriman:</label>
                     <select
