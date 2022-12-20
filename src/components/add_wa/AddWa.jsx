@@ -15,7 +15,7 @@ const AddWa = () => {
   const [error, setError] = useState(null)
 
   const handleClick = async (id) => {
-        const response = await fetch('https://tbndeliverybackend-production.up.railway.app/api/nomorWa/' + id, {
+        const response = await fetch('https://dead-puce-sea-urchin.cyclic.app/api/nomorWa/' + id, {
             method: 'DELETE',
         })
 
@@ -36,7 +36,7 @@ const AddWa = () => {
     e.preventDefault()
 
     const nomorWa = {name, nomor}
-    const response = await fetch('https://tbndeliverybackend-production.up.railway.app/api/nomorWa', {
+    const response = await fetch('https://dead-puce-sea-urchin.cyclic.app/api/nomorWa', {
         method: 'POST',
         body: JSON.stringify(nomorWa),
         headers: {
@@ -62,7 +62,7 @@ const AddWa = () => {
 
     useEffect(() => {
         const fetchNomors = async () => {
-            const response = await fetch('https://tbndeliverybackend-production.up.railway.app/api/nomorWa')
+            const response = await fetch('https://dead-puce-sea-urchin.cyclic.app/api/nomorWa')
             const json = await response.json()
             if (response.ok) {
                 setNomorWas(json)

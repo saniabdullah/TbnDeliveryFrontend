@@ -11,7 +11,7 @@ const Tracking = () => {
     const handleClick = async (noTracking) => {
         // console.log(noTracking)
         if (noTracking != '') {
-            const response = await fetch('https://tbndeliverybackend-production.up.railway.app/api/products/' + noTracking)
+            const response = await fetch('https://dead-puce-sea-urchin.cyclic.app/api/products/' + noTracking)
 
             console.log(response)
             const json = await response.json()

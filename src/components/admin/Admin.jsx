@@ -21,7 +21,7 @@ const Admin = () => {
 //   const Bearer = 'EAAGq9oJUVs4BAAu3TSk1tkptaNJxqMOnxDMPB5cdsdETk6tWcPgOpZAnjQWX44jgBoaywBKimyzZCrgIZAlvBgn4lB77GVvbGylQD4Rm7q1FuMfZAyzTuIDvONmPohkdlxtAIzYZC59Pibe6pT3KXCFGxqIbtiBgsqoEpZCDWWz3trC3coppbfSR5qT19J4noB6ZAk7mjAr1YeA5o5oRxWC'
 
   const handleClick = async (id) => {
-        const response = await fetch('https://tbndeliverybackend-production.up.railway.app/api/products/' + id, {
+        const response = await fetch('https://dead-puce-sea-urchin.cyclic.app/api/products/' + id, {
             method: 'DELETE',
         })
 
@@ -44,7 +44,7 @@ const Admin = () => {
     e.preventDefault()
 
     const product = {noResi, name, alamatBarang}
-    const response = await fetch('https://tbndeliverybackend-production.up.railway.app/api/products', {
+    const response = await fetch('https://dead-puce-sea-urchin.cyclic.app/api/products', {
         method: 'POST',
         body: JSON.stringify(product),
         headers: {
@@ -119,7 +119,7 @@ const Admin = () => {
   }
     useEffect(() => {
         const fetchProducts = async () => {
-            const response = await fetch('https://tbndeliverybackend-production.up.railway.app/api/products')
+            const response = await fetch('https://dead-puce-sea-urchin.cyclic.app/api/products')
             const json = await response.json()
             if (response.ok) {
                 setProducts(json)
@@ -132,7 +132,7 @@ const Admin = () => {
 
     useEffect(() => {
         const fetchNomor = async () => {
-            const response = await fetch('https://tbndeliverybackend-production.up.railway.app/api/nomorWa')
+            const response = await fetch('https://dead-puce-sea-urchin.cyclic.app/api/nomorWa')
             const json = await response.json()
             if (response.ok) {
                 setNomorWas(json)
