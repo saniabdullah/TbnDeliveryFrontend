@@ -114,9 +114,7 @@ const Admin = () => {
         setAlamatBarang('')
         // console.log('new product added', json)
         
-    }
-
-    
+    }  
   }
     useEffect(() => {
         const fetchProducts = async () => {
