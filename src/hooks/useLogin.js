@@ -12,7 +12,7 @@ export const useLogin = () => {
     setIsLoading(true)
     setError(null)
 
-    const response = await fetch('https://tbndeliverybackend-production.up.railway.app/api/admin/login', {
+    const response = await fetch('https://dead-puce-sea-urchin.cyclic.app/api/admin/login', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({ username, password })
