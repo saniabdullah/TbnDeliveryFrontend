@@ -20,6 +20,7 @@ const Admin = () => {
 
 //   const Bearer = 'EAAGq9oJUVs4BAAu3TSk1tkptaNJxqMOnxDMPB5cdsdETk6tWcPgOpZAnjQWX44jgBoaywBKimyzZCrgIZAlvBgn4lB77GVvbGylQD4Rm7q1FuMfZAyzTuIDvONmPohkdlxtAIzYZC59Pibe6pT3KXCFGxqIbtiBgsqoEpZCDWWz3trC3coppbfSR5qT19J4noB6ZAk7mjAr1YeA5o5oRxWC'
 
+
   const handleClick = async (id) => {
         const response = await fetch('https://dead-puce-sea-urchin.cyclic.app/api/products/' + id, {
             method: 'DELETE',
