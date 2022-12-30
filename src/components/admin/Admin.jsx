@@ -16,8 +16,6 @@ const Admin = () => {
   
   const [products, setProducts] = useState(null)
   const [error, setError] = useState(null)
-//   const nomor = '6285155100324'
-
 
   const handleClick = async (id) => {
         const response = await fetch('https://dead-puce-sea-urchin.cyclic.app/api/products/' + id, {
