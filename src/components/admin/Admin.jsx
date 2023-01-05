@@ -22,8 +22,6 @@ const Admin = () => {
         const response = await fetch('https://dead-puce-sea-urchin.cyclic.app/api/products/' + id, {
             method: 'DELETE',
         })
-        
-
 
         
         const json = await response.json()
