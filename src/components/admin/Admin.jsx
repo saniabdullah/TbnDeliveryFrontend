@@ -12,8 +12,6 @@ const Admin = () => {
   const [nomor, setNomor] = useState('')
   const [cod, setCod] = useState('')
 
-  
-  
   const { admin } = useAuthContext();
   
   const [products, setProducts] = useState(null)
