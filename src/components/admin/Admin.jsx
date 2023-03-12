@@ -22,11 +22,6 @@ const Admin = () => {
             method: 'DELETE',
         })
 
-        
-
-        
-
-        
         const json = await response.json()
 
         if (!response.ok) {
