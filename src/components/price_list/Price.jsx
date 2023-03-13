@@ -6,18 +6,15 @@ import { images } from '../../constants';
 const Price = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const priceLists = [
-        {imgurl: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/barbarian.png", harga: "Kurang dari 1 KG :", hargaDetail: 'Rp. 5.000', level: 'Level 1', desc: null},
-        {imgurl: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/archer.png", harga: "1,1 KG - 3 KG :", hargaDetail: 'Rp. 10.000', level: 'Level 2', desc: 'hanya berlaku untuk barang ukuran besar jika masih kecil tetap Harga 5.000'},
-        {imgurl: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/giant.png", harga: "3,1 KG - 6 KG :", hargaDetail: 'Rp. 10.000', level: 'Level 3', desc: null},
-        {imgurl: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/goblin.png", harga: "6,1 KG - 9 KG :", hargaDetail: 'Rp. 15.000', level: 'Level 4', desc: null},
-        {imgurl: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/wizard.png", harga: "9,1 KG - 12 KG :", hargaDetail: 'Rp. 20.000', level: 'Level 5', desc: null},
-        {imgurl: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/barbarian.png", harga: "12,1 KG - 15 KG :", hargaDetail: 'Rp. 25.000', level: 'Level 6', desc: null},
-        {imgurl: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/giant.png", harga: "15,1 KG - 20 KG :", hargaDetail: 'Rp. 35.000', level: 'Level 7', desc: null},
+        {imgurl: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/barbarian.png", harga: "< 0,9 KG :", hargaDetail: 'Rp. 5.000', level: 'Level 1', desc: null},
+        {imgurl: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/archer.png", harga: "1 KG - 1,9 KG :", hargaDetail: 'Rp. 10.000', level: 'Level 2', desc: null},
+        {imgurl: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/giant.png", harga: "2 KG - 2,9 KG :", hargaDetail: 'Rp. 15.000', level: 'Level 3', desc: null},
+        {imgurl: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/goblin.png", harga: "3 KG - 3,9 KG :", hargaDetail: 'Rp. 20.000', level: 'Level 4', desc: null},
+        {imgurl: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/wizard.png", harga: "4 KG - 4,9 KG :", hargaDetail: 'Rp. 25.000', level: 'Level 5', desc: null},
+        {imgurl: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/barbarian.png", harga: "5 KG - 5,9 KG :", hargaDetail: 'Rp. 30.000', level: 'Level 6', desc: null},
+        {imgurl: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/giant.png", harga: "6 KG :", hargaDetail: 'Rp. 40.000', level: 'Level 7', desc: "Di atas 6 KG ditambah 10.000 PER KG Harga bisa menyesuaikan dengan ukuran barang."},
 
     ];
-
-
-    
     
     const handleClick = (index) => {
         setCurrentIndex(index);
