@@ -21,6 +21,7 @@ const Price = () => {
     };
     
 
+    
   return (
     <div>
         <p className='testimonial-p' style={{color: 'black'}}>Harga Pengiriman</p>
