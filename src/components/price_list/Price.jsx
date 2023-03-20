@@ -19,10 +19,6 @@ const Price = () => {
     const handleClick = (index) => {
         setCurrentIndex(index);
     };
-
-
-    
-
     
   return (
     <div>
