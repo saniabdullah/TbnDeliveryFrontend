@@ -14,8 +14,10 @@ const Price = () => {
         {imgurl: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/barbarian.png", harga: "5 KG - 5,9 KG :", hargaDetail: 'Rp. 30.000', level: 'Level 6', desc: null},
         {imgurl: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/giant.png", harga: "6 KG :", hargaDetail: 'Rp. 40.000', level: 'Level 7', desc: "Di atas 6 KG ditambah 10.000 PER KG Harga bisa menyesuaikan dengan ukuran barang."},
 
-        
+
     ];
+
+    
     
     const handleClick = (index) => {
         setCurrentIndex(index);
