@@ -23,6 +23,7 @@ const Price = () => {
     
 
     
+    
 
   return (
     <div>
